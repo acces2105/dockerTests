@@ -1,14 +1,16 @@
 ###version: '3' ?
 ##service:
 services:
-  php_fpm:
-    build: ./php_fpm
-    ports:
-      - "9000:9000"
   nginx:
     build: ./nginx
     ports:
       - "8080:80"
+  ##php_fpm:
+   ## build: ./php_fpm
+    ##ports:
+    ##  - "9000:9000"
+  php_MyAdmin:
+    build: ./phpMyAdmin
   db_mysql:
     ##image: postgres:13
     build: ./db_mysql
