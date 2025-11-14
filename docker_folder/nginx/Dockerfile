@@ -1,2 +1,3 @@
 FROM nginx
-WORKDIR /src
+##WORKDIR /src
+COPY ./src/* /etc/nginx/html/

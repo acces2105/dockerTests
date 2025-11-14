@@ -5,15 +5,16 @@ services:
     build: ./nginx
     ports:
       - "8080:80"
-  php_fpm:
-    build: ./php8.4_fpm
-    ports:
-      - "9000:9000"
-  php_my_admin:
-    build: ./php_my_admin
-  db_mysql:
+  #php_fpm:
+  #  build: ./php8.4_fpm
+  #  ports:
+  #    - "9000:9000"
+  #php_my_admin:
+  #  build: ./php_my_admin
+  #db_mysql:
     ##image: postgres:13
-    build: ./db_mysql
+  #  build: ./db_mysql
     #environment:
     #  POSTGRES_USER: example
     #  POSTGRES_DB: exampledb
+    #docker compose -f 'docker_folder/docker-compose.yaml' up -d --build
