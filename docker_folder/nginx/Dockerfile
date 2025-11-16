@@ -1,4 +1,3 @@
-FROM nginx
-##WORKDIR /src
-##COPY /../docker_folder/src/index.html /usr/share/nginx/html/
-##COPY sites-available/nginx_main_httpS.conf /etc/nginx/conf.d
+FROM nginx:1.29
+RUN rm /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/conf.d/default.conf
