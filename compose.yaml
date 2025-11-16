@@ -1,8 +1,16 @@
 services:
+  #nginx_default:
+  #  build: ./docker_folder/nginx_default
+  #  ports:
+  #  - '80:80'
   nginx:
-    build: ./nginx
+    build: ./docker_folder/nginx
     ports:
     - '80:80'
+  php_fpm:
+    build: ./docker_folder/php8.4_fpm
+    ports:
+      - "9000:9000"
     #depends_on:
     #- web1
     #- web2
