@@ -7,10 +7,10 @@ services:
     build: ./docker_folder/nginx
     ports:
     - '80:80'
-  php_fpm:
-    build: ./docker_folder/php8.4_fpm
-    ports:
-      - "9000:9000"
+  ##php_fpm:
+  ##  build: ./docker_folder/php8.4_fpm
+  ##  ports:
+  ##    - "9000:9000"
     #depends_on:
     #- web1
     #- web2
