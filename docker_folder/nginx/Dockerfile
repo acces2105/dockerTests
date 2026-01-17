@@ -15,6 +15,7 @@ COPY ./snippets/fastcgi-php.conf /snippets/fastcgi-php.conf
 COPY ./fastcgi_params/fastcgi_params.conf /fastcgi.conf
 
 #МОНТИРОВАНИЕ ТОМА С ПРИВЯЗКОЙ
-VOLUME ["type=bind", "source=./src", "target=/nginx/app/static"]
+VOLUME ./src
+#VOLUME ["type=bind", "source=./src", "target=/nginx/app/static"]
 #VOLUME [type: "bind", source: "./src", target: "/opt/app/static"]
 
