@@ -11,8 +11,10 @@ services:
       - type: bind
         source: ./src
         target: /var/www/nginx/projects/projects_php
-  php:
-    build: ./docker_folder/php
+  #php:
+  #  build: ./docker_folder/php
+  php_fpm:
+    build: ./docker_folder/php_fpm
   ##  ports:
   ##    - "9000:9000"
     #depends_on:

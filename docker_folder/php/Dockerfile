@@ -1,5 +1,6 @@
+#FROM php:7.4-cli
 #FROM php:8.2-cli
-FROM php:7.4-cli
+FROM php:8.5-cli
 RUN apt-get update
 RUN apt-get install -y lsb-release ca-certificates apt-transport-https curl
 RUN curl -sSLo /tmp/debsuryorg-archive-keyring.deb https://packages.sury.org/debsuryorg-archive-keyring.deb
