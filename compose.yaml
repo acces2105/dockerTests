@@ -10,11 +10,9 @@ services:
     volumes:
       - type: bind
         source: ./src
-        target: /usr/share/nginx/html/www
-#volumes:
-#  myapp:
-  ##php_fpm:
-  ##  build: ./docker_folder/php8.4_fpm
+        target: /var/www/nginx/projects/projects_php
+  php:
+    build: ./docker_folder/php
   ##  ports:
   ##    - "9000:9000"
     #depends_on:
