@@ -7,6 +7,12 @@ services:
     build: ./docker_folder/nginx
     ports:
     - '80:80'
+    volumes:
+      - type: bind
+        source: ./src
+        target: /usr/share/nginx/html/www
+#volumes:
+#  myapp:
   ##php_fpm:
   ##  build: ./docker_folder/php8.4_fpm
   ##  ports:

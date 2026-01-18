@@ -6,10 +6,15 @@ services:
     ports:
       - "8080:80"
     volumes:
-    ./public:/app/public:ro:
-    ./src/nginx/conf.d:/etc/nginx/conf.d:ro:
-    ./src/nginx/nginx.conf:/etc/nginx/nginx.conf:ro:
-    ./src/nginx/ssl:/etc/nginx/ssl:ro:
+      - type: bind
+        source: ./src
+        target: /app/static
+volumes:
+  myapp:
+    #./public:/app/public:ro:
+    #./src/nginx/conf.d:/etc/nginx/conf.d:ro:
+    #./src/nginx/nginx.conf:/etc/nginx/nginx.conf:ro:
+    #./src/nginx/ssl:/etc/nginx/ssl:ro:
   #php_fpm:
   #  build: ./php8.4_fpm
   #  ports:
